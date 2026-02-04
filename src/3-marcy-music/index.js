@@ -32,3 +32,22 @@ const playlists = [
 ];
 
 // Add your code here...
+const ul = document.querySelector('#playlist-grid')
+
+playlists.forEach((song) => {
+  const li = document.createElement('li')
+
+  const img = document.createElement('img')
+
+  const p = document.createElement('p')
+
+  li.datatitle = song.title
+
+  img.src = song.img
+  img.alt = 'Good music'
+
+  p.textContent = song.description
+
+  li.append(img, p)
+  ul.append(li)
+});
