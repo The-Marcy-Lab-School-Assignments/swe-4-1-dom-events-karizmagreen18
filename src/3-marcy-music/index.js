@@ -32,3 +32,28 @@ const playlists = [
 ];
 
 // Add your code here...
+const ul = document.querySelector('#playlists-grid')
+
+const handleClick = () => {console.log('click')}
+
+playlists.forEach((song) => {
+  const li = document.createElement('li')
+
+  const img = document.createElement('img')
+
+  const p = document.createElement('p')
+
+  li.dataTitle = song.title
+
+  img.src = song.image
+  img.alt = 'Good music'
+
+  li.className = "playlist-card"
+  
+  li.addEventListener('click', handleClick);
+
+  p.textContent = song.description
+
+  li.append(img, p)
+  ul.append(li)
+});
